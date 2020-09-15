@@ -6,7 +6,7 @@ What happens when during a global pandemic bars and pubs have to close (at least
 
 This is an attempt to fix this issue! Select a quizmaster, let him prepare a few questions and you are ready to go!
 
-TODO: add github pages url here
+(Use it online here!)[http://olewehrmeyer.github.io/ultimatepubquiz]
 
 *Note: The UI of the webapp is only available in German at the moment*
 
@@ -42,7 +42,7 @@ TODO: add github pages url here
 
 ## How to write questions
 
-(Other developers please just check `Quiz` interface in `src/models.ts`)
+(Other developers please just check `Quiz` interface in [`src/models.ts`](https://github.com/olewehrmeyer/ultimatepubquiz/blob/master/src/models.ts) )
 
 ```javascript
 // <-- everything after this slashes is a comment. Remove all of them from your .json file before starting, as they are not really allowed here and should only explain the format
@@ -81,4 +81,13 @@ TODO: add github pages url here
   ]
 }
 
+```
+
+## How to run locally
+
+```sh
+git clone https://github.com/olewehrmeyer/ultimatepubquiz.git
+cd ultimatepubquiz
+yarn
+yarn start
 ```
