@@ -38,7 +38,6 @@ text-align: center;
 ;
 const QuizLoader: React.FC<IQuizLoaderProps> = ({ loadedQuiz }) => {
   const onDrop = useCallback((acceptedFiles: File[]) => {
-    console.log(acceptedFiles);
     if (acceptedFiles.length !== 1) {
         setMessage("Bitte wähle genau eine Datei aus!");
         return;
@@ -46,10 +45,12 @@ const QuizLoader: React.FC<IQuizLoaderProps> = ({ loadedQuiz }) => {
     const file = acceptedFiles[0];
     const reader = new FileReader();
 
-    reader.onabort = () => {
+    reader.onabort = (e) => {
+        console.log(e);
         setMessage("Datei konnte nicht gelesen werden!");
     }
-    reader.onerror = () => {
+    reader.onerror = (e) => {
+        console.log(e);
         setMessage("Datei konnte nicht gelesen werden!");
     }
     reader.onload = () => {
@@ -58,6 +59,7 @@ const QuizLoader: React.FC<IQuizLoaderProps> = ({ loadedQuiz }) => {
             const quiz = JSON.parse(jsonString as any); // fuck it, we catch all
             loadedQuiz(quiz);
         } catch (e) {
+            console.log(e);
             setMessage("Datei ist fehlerhaft!");
         }
     }
