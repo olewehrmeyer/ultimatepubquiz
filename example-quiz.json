@@ -1,0 +1,34 @@
+{
+  "greeting": {
+    "title": "Dummy-Title",
+    "preImageText": "Text before the image<br>HTML is supported!",
+    "image": "https://media4.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif?cid=ecf05e47yi2vkp2tqxgw945xijt8t8mtuip8ykftm6lay3s0&rid=giphy.gif",
+    "postImageText": "<i>Even more text</i>"
+  },
+  "questions": [
+    {
+      "questionHeader": "Round 1 - Question 1",
+      "questionText": "What was special about the Ford Nucleon concept car that Ford developed in 1957?", 
+      "image": "https://media4.giphy.com/media/mIMsLsQTJzAn6/giphy.gif?cid=ecf05e47g10kl6l6f14q3bvcbc9gaafp134bb9jqeqe5tt2h&rid=giphy.gif",
+      "optionsValues": ["It was powered by a nuclear reactor", "It was the first car with power steering", "It was a coorporation with GM", "It had five wheels"],
+      "questionEndText": "<i>Maybe add trivia here</i>",
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Small break, see you in 5'",
+      "questionText": "Nothing stops you from getting creative with what a 'question' really is",
+    },
+    {
+      "questionHeader": "Round 2 - Question 1",
+      "questionText": "Name this song!",
+      "audio": {
+        "src": "http://example.com/fortunate-son.mp3",
+        "type": "mpeg",
+        "startTime": 0,
+        "playTime": 9.2
+      },
+      "image": "http://example.com/vietnam.gif",
+      "timerCountdown": 60
+    }
+  ]
+}
