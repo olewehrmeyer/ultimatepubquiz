@@ -62,7 +62,7 @@ const QuizLoader: React.FC<IQuizLoaderProps> = ({ loadedQuiz }) => {
         }
     }
     reader.readAsText(file);
-  }, []);
+  }, [loadedQuiz]);
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
   const [message, setMessage] = useState("Lade dein Quiz, um zu beginnen!");
