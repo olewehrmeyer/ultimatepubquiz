@@ -64,7 +64,7 @@ This is an attempt to fix this issue! Select a quizmaster, let him prepare a few
     },
     {
       "questionHeader": "Small break, see you in 5'", //  mandatory
-      "questionText": "Nothing stops you from getting creative with what a 'question' really is", // mandatory
+      "questionText": "Nothing stops you from getting creative with what a 'question' really is" // mandatory
     },
     {
       "questionHeader": "Round 2 - Question 1", // mandatory
