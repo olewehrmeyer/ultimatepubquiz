@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ultimatepubquiz/static/css/main.9c3cbadc.chunk.css",
-    "main.js": "/ultimatepubquiz/static/js/main.f4a14f11.chunk.js",
-    "main.js.map": "/ultimatepubquiz/static/js/main.f4a14f11.chunk.js.map",
+    "main.js": "/ultimatepubquiz/static/js/main.c010a88e.chunk.js",
+    "main.js.map": "/ultimatepubquiz/static/js/main.c010a88e.chunk.js.map",
     "runtime-main.js": "/ultimatepubquiz/static/js/runtime-main.d740d96e.js",
     "runtime-main.js.map": "/ultimatepubquiz/static/js/runtime-main.d740d96e.js.map",
     "static/js/2.ab8d5d5a.chunk.js": "/ultimatepubquiz/static/js/2.ab8d5d5a.chunk.js",
     "static/js/2.ab8d5d5a.chunk.js.map": "/ultimatepubquiz/static/js/2.ab8d5d5a.chunk.js.map",
     "index.html": "/ultimatepubquiz/index.html",
-    "precache-manifest.7905c32800c73ab4b4be71eef0e707ee.js": "/ultimatepubquiz/precache-manifest.7905c32800c73ab4b4be71eef0e707ee.js",
+    "precache-manifest.3c82866bad83b152c35be02305c14a96.js": "/ultimatepubquiz/precache-manifest.3c82866bad83b152c35be02305c14a96.js",
     "service-worker.js": "/ultimatepubquiz/service-worker.js",
     "static/css/main.9c3cbadc.chunk.css.map": "/ultimatepubquiz/static/css/main.9c3cbadc.chunk.css.map",
     "static/js/2.ab8d5d5a.chunk.js.LICENSE.txt": "/ultimatepubquiz/static/js/2.ab8d5d5a.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.d740d96e.js",
     "static/js/2.ab8d5d5a.chunk.js",
     "static/css/main.9c3cbadc.chunk.css",
-    "static/js/main.f4a14f11.chunk.js"
+    "static/js/main.c010a88e.chunk.js"
   ]
 }
