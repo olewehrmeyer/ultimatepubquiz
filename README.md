@@ -6,7 +6,7 @@ What happens when during a global pandemic bars and pubs have to close (at least
 
 This is an attempt to fix this issue! Select a quizmaster, let him prepare a few questions and you are ready to go!
 
-(Use it online here!)[http://olewehrmeyer.github.io/ultimatepubquiz]
+[Use it online here!](http://olewehrmeyer.github.io/ultimatepubquiz)
 
 *Note: The UI of the webapp is only available in German at the moment*
 
@@ -81,6 +81,14 @@ This is an attempt to fix this issue! Select a quizmaster, let him prepare a few
   ]
 }
 
+```
+
+## How to remove all players
+
+In the browser developer console, run
+
+```javascript
+window.localStorage.clear()
 ```
 
 ## How to run locally
