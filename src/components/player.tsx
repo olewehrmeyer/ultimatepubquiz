@@ -1,7 +1,6 @@
-import React, { useContext, useEffect, useMemo, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Player } from "../models";
-import { RoundContext } from "../round-context";
 import { RoundButton } from "./button";
 
 const PlayerControls = styled.div`
@@ -58,7 +57,6 @@ const PlayerDisplay: React.FC<IPlayerDisplayProps> = ({
   incrementScore,
   decrementScore,
 }) => {
-  const round = useContext(RoundContext);
 
   const increment = () => {
     incrementScore();

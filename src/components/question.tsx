@@ -71,7 +71,7 @@ const QuestionRenderer: React.FC<IQuestionRendererProps> = ({
       )}
       {question.audio && (
         <>
-          <audio ref={audioRef} onCanPlayThrough={() => setPlaying(true)}>
+          <audio ref={audioRef} onCanPlayThrough={() => setPlaying(true)} key={'Audio' + question.audio.src}>
             <source
               src={question.audio.src}
               type={"audio/" + question.audio.type}
