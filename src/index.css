@@ -1,10 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;900&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Lato';
+  font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #333;
+  background: url('img/start.jpg');
+  color: #fff;
+}
+
+h1  {
+  font-family: 'Lato';
+  font-weight: 300;
+  font-size: 50pt;
+}
+
+h2  {
+  font-family: 'Lato';
+  font-weight: 300;
+  font-size: 14pt;
 }
 
 code {
@@ -12,11 +28,82 @@ code {
     monospace;
 }
 
+.pubimg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.timer {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  margin-top: -75px;
+  margin-left: -75px;
+  width: 150px;
+  height: 100px;
+  border-radius: 50%;
+  color: #fff;
+  z-index: 2000;
+}
+
+.nav {
+  with: 300px;
+
+  z-index: 2000;
+  left: 20px;
+  bottom: 20px;
+  position: absolute;}
+
+.buttons {
+  position: absolute;
+
+}
+
+.players {
+  position: absolute;
+  z-index: 2000;
+  top: 20px;
+  left: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.4);
+  min-width: 15%;
+}
+
+.question {
+  position: absolute;
+  color: #fff;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,1) 100%);
+  width: 68%;
+  height: 50%;
+  padding-right: 2%;
+  padding-left: 30%;
+  padding-top: 120px;
+  bottom: 0;
+  z-index: 1000;
+}
+
 p {
-  font-size: 16pt;
-  text-align: center;
+  font-size: 28pt;
+  line-height: 1.5;
+  font-weight: 300;
+  margin:0;
+  padding: 0;
+
+}
+
+ul {
+  margin-bottom: 100px;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 li {
-  font-size: 16pt;
+  font-size: 18pt;
+  line-height: 1.5;
 }

@@ -8,40 +8,23 @@ import Greeting from "./greeting";
 import PlayerDisplay from "./player";
 import QuestionRenderer from "./question";
 import TimerControl from "./timer-control";
+import QuizLoader from "./quiz-loader";
+import PlayersLoader from "./players-loader";
 
 const TimerContent = styled.div`
-  grid-column-start: 1;
-  grid-column-end: 2;
-  justify-self: center;
+  
 `;
 
 const NavContent = styled.div`
-  grid-column-start: 1;
-  grid-column-end: 2;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  padding-left: 10px;
+
 `;
 
 const PlayerContent = styled.div`
-  grid-column-start: 1;
-  grid-column-end: 2;
-  padding-left: 10px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 60px;
+
 `;
 
 const MainContent = styled.div`
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  
 `;
 
 function loadPlayers(): Player[] {
@@ -110,22 +93,22 @@ const PubQuiz: React.FC<{quiz: Quiz}> = ({quiz}) => {
 
   return (
     <RoundContext.Provider value={round}>
-      <TimerContent>
+      <TimerContent className={"timer"}>
         {countdownFrom && <TimerControl countdownFrom={countdownFrom} key={"TimerControlForRound" + round}></TimerControl>}
       </TimerContent>
-      <NavContent>
+      <NavContent className={"nav"}>
         <Button onClick={previousRound} disabled={round < 0}>&lt; Zurück</Button>
         <PrimaryButton onClick={nextRound} disabled={round >= quiz.questions.length - 1}>Weiter &gt;</PrimaryButton>
       </NavContent>
-      <PlayerContent>
-        <div style={{overflow: "scroll", maxHeight: "calc(100vh - 430px)"}}>
+      <PlayerContent className={"players"}>
+        {players.length == 0 && <PlayersLoader loadedPlayers={setPlayers}></PlayersLoader>}
           {players.map((player) => (
             <PlayerDisplay key={"Player" + player.name} player={player} incrementScore={() => modifyScore(player, 1)} decrementScore={() => modifyScore(player, -1)}></PlayerDisplay>
           ))}
-        </div>
+
         <AddPlayerButton addPlayer={addPlayer}></AddPlayerButton>
       </PlayerContent>
-      <MainContent>
+      <MainContent style={{height: "100%",  width: "100%"}}>
         {round < 0 || round >= quiz.questions.length ? <Greeting {...quiz.greeting}></Greeting> : <QuestionRenderer question={quiz.questions[round]} startCountdown={startCountdown}></QuestionRenderer>}
       </MainContent>
     </RoundContext.Provider>

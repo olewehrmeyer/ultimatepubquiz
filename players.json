@@ -1,0 +1,43 @@
+[
+  {
+    "name": "Florian",
+    "imageUrl": "http://localhost:3000/ultimatepubquiz/assets/images/florian.jpg",
+    "score": 0
+  },
+  {
+    "name": "Wiebke",
+    "imageUrl": "http://localhost:3000/ultimatepubquiz/assets/images/wiebke.jpg",
+    "score": 0
+  },
+  {
+    "name": "Sönke",
+    "imageUrl": "http://localhost:3000/ultimatepubquiz/assets/images/soenke.jpg",
+    "score": 0
+  },
+  {
+    "name": "Jörn",
+    "imageUrl": "http://localhost:3000/ultimatepubquiz/assets/images/joern.jpg",
+    "score": 0
+  },
+  {
+    "name": "Daniel",
+    "imageUrl": "http://localhost:3000/ultimatepubquiz/assets/images/daniel.jpg",
+    "score": 0
+  },
+  {
+    "name": "Canice",
+    "imageUrl": "http://localhost:3000/ultimatepubquiz/assets/images/canice.jpg",
+    "score": 0
+  },
+  {
+    "name": "Rene",
+    "imageUrl": "http://localhost:3000/ultimatepubquiz/assets/images/rene.jpg",
+    "score": 0
+  },
+  {
+    "name": "Ole",
+    "imageUrl": "http://localhost:3000/ultimatepubquiz/assets/images/ole.jpg",
+    "score": 0
+  }
+]
+

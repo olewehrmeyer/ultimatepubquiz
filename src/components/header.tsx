@@ -12,14 +12,15 @@ interface IAppHeaderProps {
 }
 
 const Header = styled.header`
-  grid-column-start: 1;
-  grid-column-end: 4;
-  background-color: ${brandColor};
-  color: ${brandColorText};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  z-index: 2000;
+  top: 0;
+  right: 0;
+  width: 550px;
+  padding: 20px;
+  padding-left: 50px;
+  text-align: right;
+    
 `;
 
 const Title = styled.h1`

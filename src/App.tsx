@@ -21,12 +21,8 @@ const subtitles = [
 ];
 
 const MainGrid = styled.div`
-  display: grid;
-  grid-template-rows: 80px 200px 60px 1fr;
-  grid-template-columns: 300px 1fr;
-  gap: 10px;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 `;
 
 

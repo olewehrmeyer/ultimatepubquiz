@@ -5,10 +5,8 @@ import { Question } from "../models";
 import { Button } from "./button";
 
 const Image = styled.img`
-  max-height: 50vh;
-  max-width: calc(100vw - 310px);
-  min-width: 10vw;
-  margin: 5px;
+
+  
 `;
 
 interface IQuestionRendererProps {
@@ -56,7 +54,9 @@ const QuestionRenderer: React.FC<IQuestionRendererProps> = ({
 
   return (
     <>
-      <h1>{question.questionHeader}</h1>
+      {question.image && <Image className={"pubimg"} src={question.image}></Image>}
+      <div className={"question"}>
+      <h2>{question.questionHeader}</h2>
       <p dangerouslySetInnerHTML={{ __html: question.questionText }}></p>
       {question.optionsValues && (
         <ul>
@@ -65,7 +65,7 @@ const QuestionRenderer: React.FC<IQuestionRendererProps> = ({
           ))}
         </ul>
       )}
-      {question.image && <Image src={question.image}></Image>}
+
       {question.questionEndText && (
         <p dangerouslySetInnerHTML={{ __html: question.questionEndText }}></p>
       )}
@@ -82,6 +82,7 @@ const QuestionRenderer: React.FC<IQuestionRendererProps> = ({
           </Button>
         </>
       )}
+      </div>
     </>
   );
 };

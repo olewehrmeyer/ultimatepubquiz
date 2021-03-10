@@ -2,30 +2,29 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Player } from "../models";
 import { PrimaryButton } from "./button";
+import { AddPlayerPrimaryButton } from "./button";
 
 interface IAddPlayerButtonProps {
   addPlayer: (player: Player) => void;
 }
 
 const AddPopupContainer = styled.div`
-  width: 420px;
-  height: 190px;
-  background-color: white;
-  border-radius: 10px;
-  left: 50%;
-  top: 50%;
-  margin-left: -210px;
-  margin-top: -85px;
-  position: absolute;
-  box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.25);
+    background: rgba(0,0,0,0.4);
+    border-radius: 20px;
+    left: 250%;
+    top: 40%;
+    position: absolute;
+    box-shadow: 10px 10px 30px 0px rgb(0 0 0 / 25%);
+    padding: 20px;
 `;
 
 const AddPopupContent = styled.div`
+font-size: 16pt;
   padding: 10px;
   display: grid;
-  grid-template-columns: 80px 300px;
+  grid-template-columns: 120px 300px;
   grid-template-rows: 50px 50px 50px;
-  row-gap: 10px;
+  row-gap: 12px;
   column-gap: 20px;
   grid-template-areas:
     "name-label name-input"
@@ -35,19 +34,20 @@ const AddPopupContent = styled.div`
 
 const NameLabel = styled.span`
   grid-area: name-label;
-  place-self: center end;
+  place-self: center start;
 `;
 
 const ImageLabel = styled.span`
   grid-area: image-label;
-  place-self: center end;
+  place-self: center start;
 `;
 
 const Input = styled.input`
   height: 30px;
-  border-radius: 25px;
+  border-radius: 20px;
   border: 1px solid lightgrey;
   padding: 10px;
+  font-size: 16pt;
 `;
 
 const NameInput = styled(Input)`
@@ -82,11 +82,12 @@ const AddPlayerButton: React.FC<IAddPlayerButtonProps> = ({addPlayer}) => {
 
   return (
     <>
-      <PrimaryButton onClick={() => setPopupOpen(!isPopupOpen)}>
-        {isPopupOpen ? "Abbrechen" : "Neuer Spieler"}
-      </PrimaryButton>
+      <AddPlayerPrimaryButton onClick={() => setPopupOpen(!isPopupOpen)}>
+        {isPopupOpen ? "+" : "+"}
+      </AddPlayerPrimaryButton>
       {isPopupOpen && (
         <AddPopupContainer>
+          <p>Neuer Spieler</p>
           <AddPopupContent>
             <NameLabel>Name:</NameLabel>
             <ImageLabel>Bild-URL:</ImageLabel>

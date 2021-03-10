@@ -11,13 +11,15 @@ const PlayerControls = styled.div`
 `;
 
 const PlayerContainer = styled.div<{ marked: boolean }>`
-  padding: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
   display: grid;
   grid-template-rows: 60px;
   grid-template-columns: 60px 1fr 30px;
   column-gap: 10px;
 
-  background-color: ${({ marked }) => (marked ? "lightyellow" : "white")};
+  background-color: ${({ marked }) => (marked ? "rgba(0,0,0,0.5)" : "rgba(0,0,0,0.3)")};
 
   :hover ${PlayerControls} {
     visibility: visible;
@@ -37,12 +39,13 @@ const PlayerStats = styled.div`
 `;
 
 const PlayerName = styled.span`
-  font-size: 14pt;
+  font-size: 18pt;
+  font-weight: 900;
   place-self: start start;
 `;
 
 const PlayerScore = styled.span`
-  font-size: 12pt;
+  font-size: 16pt;
   place-self: end start;
 `;
 
@@ -70,7 +73,8 @@ const PlayerDisplay: React.FC<IPlayerDisplayProps> = ({
 
   return (
     <PlayerContainer marked={!!player.modifiedThisRound}>
-      <RoundImage src={player.imageUrl}></RoundImage>
+        {player.imageUrl && <RoundImage src={player.imageUrl}></RoundImage>}
+        {!player.imageUrl && <RoundImage src={"http://localhost:3000/ultimatepubquiz/assets/images/user.png"}></RoundImage>}
       <PlayerStats>
         <PlayerName>
           {player.name}
