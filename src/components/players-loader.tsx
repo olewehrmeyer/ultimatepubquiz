@@ -2,10 +2,10 @@ import React, { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import styled from "styled-components";
 import { brandColor } from "../colors";
-import { Quiz } from "../models";
+import { Player } from "../models";
 
-interface IQuizLoaderProps {
-  loadedQuiz: (quiz: Quiz) => void;
+interface IPlayerLoaderProps {
+  loadedPlayers: (players: Player[]) => void;
 }
 
 const LoaderContainer = styled.div`
@@ -13,30 +13,24 @@ const LoaderContainer = styled.div`
 `;
 
 const LoaderBox = styled.div<{dragging: boolean}>`
-  position:absolute;
-  left: 25%;
-  top:25%;
-  z-index:2000;
-  border: 1px dashed ${brandColor};
   border-radius: 10px;
-  width: 50%;
-  height: 50%;
-  opacity: ${({dragging}) => dragging ? "0.7" : "0.2"};
+  width: 300px;
+  background: ${({dragging}) => dragging ? "rgba(0, 0, 0, 1)" : "rgba(0, 0, 0, 0.6)"};
   cursor: pointer;
-  background-color: ${({dragging}) => dragging ? "#eff7ff" : "white"};
+  font-size:16pt;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: grid;
+  place-self: end start;
 `;
 
 const StatusMessage = styled.div`
-position:absolute;
-width: 50%;
-left: 25%;
-
-top: 20%;
-font-size: 18pt;
+font-size: 12pt;
 text-align: center;
 `
 ;
-const QuizLoader: React.FC<IQuizLoaderProps> = ({ loadedQuiz }) => {
+const PlayersLoader: React.FC<IPlayerLoaderProps> = ({ loadedPlayers }) => {
   const onDrop = useCallback((acceptedFiles: File[]) => {
     if (acceptedFiles.length !== 1) {
         setMessage("Bitte wähle genau eine Datei aus!");
@@ -56,30 +50,31 @@ const QuizLoader: React.FC<IQuizLoaderProps> = ({ loadedQuiz }) => {
     reader.onload = () => {
         const jsonString = reader.result;
         try {
-            const quiz = JSON.parse(jsonString as any); // fuck it, we catch all
-            loadedQuiz(quiz);
+            const players = JSON.parse(jsonString as any); // fuck it, we catch all
+            window.localStorage.setItem("players", JSON.stringify(players));
+            loadedPlayers(players);
         } catch (e) {
             console.log(e);
             setMessage("Datei ist fehlerhaft!");
         }
     }
     reader.readAsText(file);
-  }, [loadedQuiz]);
+  }, [loadedPlayers]);
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
-  const [message, setMessage] = useState("Lade dein Quiz, um zu beginnen!");
+  const [message, setMessage] = useState("");
   return <LoaderContainer>
       <StatusMessage>{message}</StatusMessage>
     <LoaderBox {...getRootProps()} dragging={isDragActive}>
       <input {...getInputProps()} />
       {
         isDragActive ?
-          <p>Ab jetzt gerne loslassen ;) ...</p> :
-          <p>Ziehe dein Quiz hier hin oder klicke, um es auszuwählen</p>
+          <span>...und loslassen!</span> :
+          <span>Ziehe dein Spielerliste hier hin oder klicke, um sie auszuwählen. Klicke auf '+' um Spieler manuell hinzuzufügen.</span>
       }
     </LoaderBox>
 
   </LoaderContainer>;
 };
 
-export default QuizLoader;
+export default PlayersLoader;
