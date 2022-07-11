@@ -13,12 +13,16 @@ const LoaderContainer = styled.div`
 `;
 
 const LoaderBox = styled.div<{dragging: boolean}>`
-  border: 1px dashed ${brandColor};
   border-radius: 10px;
-  height: 100px;
-  opacity: ${({dragging}) => dragging ? "0.7" : "0.2"};
+  width: 300px;
+  background: ${({dragging}) => dragging ? "rgba(0, 0, 0, 1)" : "rgba(0, 0, 0, 0.6)"};
   cursor: pointer;
-  background-color: ${({dragging}) => dragging ? "#eff7ff" : "white"};
+  font-size:16pt;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: grid;
+  place-self: end start;
 `;
 
 const StatusMessage = styled.div`
@@ -58,15 +62,15 @@ const PlayersLoader: React.FC<IPlayerLoaderProps> = ({ loadedPlayers }) => {
   }, [loadedPlayers]);
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
-  const [message, setMessage] = useState("Lade dein Quiz, um zu beginnen!");
+  const [message, setMessage] = useState("");
   return <LoaderContainer>
       <StatusMessage>{message}</StatusMessage>
     <LoaderBox {...getRootProps()} dragging={isDragActive}>
       <input {...getInputProps()} />
       {
         isDragActive ?
-          <p>Ab jetzt gerne loslassen ;) ...</p> :
-          <p>Ziehe dein Playerliste hier hin oder klicke, um sie auszuwählen</p>
+          <span>...und loslassen!</span> :
+          <span>Ziehe dein Spielerliste hier hin oder klicke, um sie auszuwählen. Klicke auf '+' um Spieler manuell hinzuzufügen.</span>
       }
     </LoaderBox>
 

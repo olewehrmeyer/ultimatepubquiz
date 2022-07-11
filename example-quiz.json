@@ -1,34 +1,349 @@
 {
-  "greeting": {
-    "title": "Dummy-Title",
-    "preImageText": "Text before the image<br>HTML is supported!",
-    "image": "https://media4.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif?cid=ecf05e47yi2vkp2tqxgw945xijt8t8mtuip8ykftm6lay3s0&rid=giphy.gif",
-    "postImageText": "<i>Even more text</i>"
-  },
   "questions": [
     {
-      "questionHeader": "Round 1 - Question 1",
-      "questionText": "What was special about the Ford Nucleon concept car that Ford developed in 1957?", 
-      "image": "https://media4.giphy.com/media/mIMsLsQTJzAn6/giphy.gif?cid=ecf05e47g10kl6l6f14q3bvcbc9gaafp134bb9jqeqe5tt2h&rid=giphy.gif",
-      "optionsValues": ["It was powered by a nuclear reactor", "It was the first car with power steering", "It was a coorporation with GM", "It had five wheels"],
-      "questionEndText": "<i>Maybe add trivia here</i>",
+      "questionHeader": "Runde 1 - Frage 1 - Allgemein",
+      "questionText": "In welchem Jahr wurde das Produkt WD40 vom Chemiker Norm Larsen erfunden?",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/wd40.webp",
+      "optionsValues": [
+        "1953",
+        "1974",
+        "1981",
+        "1967"
+      ],
       "timerCountdown": 60
     },
     {
-      "questionHeader": "Small break, see you in 5'",
-      "questionText": "Nothing stops you from getting creative with what a 'question' really is"
+      "questionHeader": "Runde 1 - Frage 2 - Allgemein",
+      "questionText": "Wie viele Streifen sind auf der (aktuellen) US-Flagge?",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/usa.jpg",
+      "optionsValues": [
+        "13",
+        "10",
+        "14",
+        "15"
+      ],
+      "timerCountdown": 60
     },
     {
-      "questionHeader": "Round 2 - Question 1",
-      "questionText": "Name this song!",
+      "questionHeader": "Runde 1 - Frage 3 - Geografie",
+      "questionText": "Welches Land hat die meisten Inseln in der Welt?",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/inseln.jpg",
+      "optionsValues": [
+        "Kanada",
+        "Dänemark",
+        "Philipinen",
+        "Schweden"
+      ],
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Runde 1 - Frage 4 - Geografie",
+      "questionText": "Welcher ist der längste Fluss der Welt?",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/fluss.jpg",
+      "optionsValues": [
+        "Nil",
+        "Amazonas",
+        "Jangtsekiang",
+        "Kongo"
+      ],
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Runde 1 - Frage 5 - Geografie",
+      "questionText": "Wo befindet sich Angkor Wat?",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/angkorwatt.jpg",
+      "optionsValues": [
+        "Thailand",
+        "Vietnam",
+        "Laos",
+        "Kambodcha"
+      ],
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Runde 1 - Frage 6 - Geschichte",
+      "questionText": "Wann wurde die Londoner U-Bahn eröffnet?",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/newtube.jpg",
+      "optionsValues": [
+        "1863",
+        "1898",
+        "1904",
+        "1923"
+      ],
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Runde 1 - Frage 7 - Geschichte",
+      "questionText": "Welches der folgenden Reiche hatte keine Schriftsprache",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/skript.jpg",
+      "optionsValues": [
+        "Inka",
+        "Azteken",
+        "Ägypter",
+        "Römer"
+      ],
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Runde 1 - Frage 8 - Geschichte",
+      "questionText": "In welchem Jahr ist die Titanic am 15. April auf ihrer Jungfernfahrt von Southampton im Atlantik gesunken?",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/titanic.jpg",
+      "optionsValues": [
+        "1912",
+        "1909",
+        "1914",
+        "1920"
+      ],
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Runde 1 - Frage 9 - Geschichte",
+      "questionText": "Schätzfrage: Wann war die erste Verwendung von modernem Papier?",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/papier.jpg",
+      "optionsValues": [],
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Runde 1 - Frage 10 - Geschichte",
+      "questionText": "Schätzfrage: Wann wurde Buddha geboren?",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/buddha.webp",
+      "optionsValues": [],
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Runde 1 - Frage 11 - Kunst",
+      "questionText": "Welcher Künstler hat im 17. Jahrhundert \"Selbstporträt mit zwei Kreisen\" gemalt?",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/malerei.jpg",
+      "optionsValues": [
+        "Rembrandt van Rijn",
+        "Jan Vermeer",
+        "Vincent van Gogh",
+        "Hieronymus Bosch"
+      ],
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Pause",
+      "questionText": "Zeit, ein Bier zu holen...",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/break.jpg",
+      "timerCountdown": 600
+    },
+    {
+      "questionHeader": "Runde 2 - Frage 1 - Wissenschaft",
+      "questionText": "Wie viele Atemzüge nimmt der menschliche Körper täglich?",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/atem.webp",
+      "optionsValues": [
+        "20.000",
+        "15.000",
+        "12.500",
+        "35.000"
+      ],
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Runde 2 - Frage 2 - Wissenschaft",
+      "questionText": "Schätzfrage: Wie viel Prozent der Masse des Sonnensystems befindet sich in der Sonne auf 1 Prozent genau?",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/sonne.jpeg",
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Runde 2 - Frage 3 - Wissenschaft",
+      "questionText": "Was ist die Lebensdauer einer Libelle?",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/libelle.jpg",
+      "optionsValues": [
+        "24 Stunden",
+        "1 Monat",
+        "72 Stunden",
+        "2 Wochen"
+      ],
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Runde 2 - Frage 4 - Wissenschaft",
+      "questionText": "Wer hat einen Hammer und eine Feder auf den Mond fallen lassen, um zu demonstrieren, dass sie im Vakuum gleich schnell fallen?",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/mond.jpg",
+      "optionsValues": [
+        "David Scott",
+        "Neil Armstrong",
+        "Buzz Aldrin",
+        "Michael Collins"
+      ],
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Runde 2 - Frage 5 - Wissenschaft",
+      "questionText": "Wie viele Jahre wird es dauern, bis ein von der Erde abgefeuertes Raumschiff den Planeten Pluto erreicht?",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/spaceship.jpg",
+      "optionsValues": [
+        "9,5",
+        "12",
+        "7,5",
+        "17"
+      ],
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Runde 2 - Frage 6 - Personen",
+      "questionText": "Wer ist das?",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/harris.jpg",
+      "optionsValues": [],
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Runde 2 - Frage 7 - Personen",
+      "questionText": "Wie heißt dieser Schauspieler?",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/marcruffalo.jpg",
+      "optionsValues": [],
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Runde 2 - Frage 8 - Personen",
+      "questionText": "Wer ist das?",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/clinton.jpg",
+      "optionsValues": [],
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Runde 2 - Frage 9 - Unterhaltung",
+      "questionText": "Was war der erste Spielfilm von Pixar?",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/Pixar.webp",
+      "optionsValues": [
+        "Toy Story",
+        "Das große Krabbeln",
+        "Monster AG",
+        "Findet Nemo"
+      ],
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Runde 2 - Frage 10 - Unterhaltung",
+      "questionText": "In welchem Jahr gingen die Beatles zum ersten Mal in die USA?",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/beatles.jpeg",
+      "optionsValues": [
+        "1964",
+        "1961",
+        "1967",
+        "1963"
+      ],
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Runde 2 - Frage 11 - Unterhaltung",
+      "questionText": "\"Meine Religion zu verlieren\" war 1991 ein Hit für welche alternative Rockband?",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/releigion.jpg",
+      "optionsValues": [
+        "Nirvana",
+        "Bad Religion",
+        "R.E.M.",
+        "Alice In Chains"
+      ],
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Runde 2 - Frage 12 - Unterhaltung",
+      "questionText": "Der Meister der Münze, Lord Petyr Baelish aus \"Game Of Thrones\", war auch unter welchem Namen bekannt?",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/got.jpg",
+      "optionsValues": [
+        "Littlefinger",
+        "Bigfoot",
+        "Shortarm",
+        "Fasthand",
+        "Slowtoe"
+      ],
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Pause",
+      "questionText": "Zeit, um zu...",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/break2.webp",
+      "timerCountdown": 600
+    },
+    {
+      "questionHeader": "Runde 3 - Frage 1 - Musik",
+      "questionText": "Wie heißt der Song... (...und von wem ist er)?",
       "audio": {
-        "src": "http://example.com/fortunate-son.mp3",
+        "src": "http://localhost:3000/ultimatepubquiz/assets/audio/7nationarmy.ogg",
+        "type": "ogg",
+        "startTime": 0,
+        "playTime": 9.2,
+        "autoPlay": false
+      },
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/guitar1.jpg",
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Runde 3 - Frage 2 - Musik",
+      "questionText": "Wie heißt der Song... (...und von wem ist er)?",
+      "audio": {
+        "src": "http://localhost:3000/ultimatepubquiz/assets/audio/beatit.ogg",
+        "type": "ogg",
+        "startTime": 6,
+        "playTime": 9.2,
+        "autoPlay": false
+      },
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/guitar2.jpg",
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Runde 3 - Frage 3 - Musik",
+      "questionText": "Wie heißt der Song... (...und von wem ist er)?",
+      "audio": {
+        "src": "http://localhost:3000/ultimatepubquiz/assets/audio/schrei.ogg",
+        "type": "ogg",
+        "startTime": 10,
+        "playTime": 9.2,
+        "autoPlay": false
+      },
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/guitar3.jpg",
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Runde 3 - Frage 4 - Musik",
+      "questionText": "Wie heißt der Song... (...und von wem ist er)?",
+      "audio": {
+        "src": "http://localhost:3000/ultimatepubquiz/assets/audio/blindinglights.ogg",
+        "type": "mpeg",
+        "startTime": 15,
+        "playTime": 9.2,
+        "autoPlay": false
+      },
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/guitar4.jpg",
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Runde 3 - Frage 5 - Musik",
+      "questionText": "Wie heißt der Song... (...und von wem ist er)?",
+      "audio": {
+        "src": "http://localhost:3000/ultimatepubquiz/assets/audio/enter.ogg",
         "type": "mpeg",
         "startTime": 0,
-        "playTime": 9.2
+        "playTime": 9.2,
+        "autoPlay": false
       },
-      "image": "http://example.com/vietnam.gif",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/guitar5.jpg",
       "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Runde 3 - Frage 6 - Musik",
+      "questionText": "Wie heißt der Song... (...und von wem ist er)?",
+      "audio": {
+        "src": "http://localhost:3000/ultimatepubquiz/assets/audio/smells.ogg",
+        "type": "mpeg",
+        "startTime": 0,
+        "playTime": 9.2,
+        "autoPlay": false
+      },
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/guitar6.jpg",
+      "timerCountdown": 60
+    },
+    {
+      "questionHeader": "Bonusfrage - (6 Punkte)",
+      "questionText": "Welcher bekannte Satz verbirgt sich in dieser Wortschlange?",
+      "image": "http://localhost:3000/ultimatepubquiz/assets/images/bonus.jpg",
+      "optionsValues": [
+        "t a s u g c t h a r c o v m z w e u i r k d r e k n c i t c s h z t w a r n k e l i ö n s e e m s t s a w g r g t e h b i a o u k t"
+      ],
+      "timerCountdown": 180
     }
   ]
 }

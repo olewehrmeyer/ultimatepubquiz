@@ -1,0 +1,43 @@
+[
+  {
+    "name": "Sandra",
+    "imageUrl": "http://localhost:3000/ultimatepubquiz/assets/images/players/1.png",
+    "score": 0
+  },
+  {
+    "name": "Anne",
+    "imageUrl": "http://localhost:3000/ultimatepubquiz/assets/images/players/2.png",
+    "score": 0
+  },
+  {
+    "name": "Claus",
+    "imageUrl": "http://localhost:3000/ultimatepubquiz/assets/images/players/3.png",
+    "score": 0
+  },
+  {
+    "name": "Kevin",
+    "imageUrl": "http://localhost:3000/ultimatepubquiz/assets/images/players/4.png",
+    "score": 0
+  },
+  {
+    "name": "Candice",
+    "imageUrl": "http://localhost:3000/ultimatepubquiz/assets/images/players/5.png",
+    "score": 0
+  },
+  {
+    "name": "Renate",
+    "imageUrl": "http://localhost:3000/ultimatepubquiz/assets/images/players/6.png",
+    "score": 0
+  },
+  {
+    "name": "Rene",
+    "imageUrl": "http://localhost:3000/ultimatepubquiz/assets/images/players/7.png",
+    "score": 0
+  },
+  {
+    "name": "Ole",
+    "imageUrl": "http://localhost:3000/ultimatepubquiz/assets/images/players/8.png",
+    "score": 0
+  }
+]
+

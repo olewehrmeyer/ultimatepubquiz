@@ -2,6 +2,7 @@ export interface Player {
   name: string;
   imageUrl: string;
   score: number;
+  scoreThisRound?: number;
   modifiedThisRound?: boolean;
 }
 
@@ -17,6 +18,7 @@ export interface AudioOptions {
   type: string;
   startTime: number;
   playTime?: number;
+  autoPlay: boolean;
 }
 
 export interface Question {

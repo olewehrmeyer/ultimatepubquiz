@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import { brandColor, brandColorText, grey } from "../colors";
+import { brandColor, brandColorText } from "../colors";
 
 interface ITimerProps {
   remaining: number;
@@ -15,7 +15,7 @@ interface IClockProps {
 const Svg = styled.svg`
   width: 150px;
   height: 150px;
-  background: rgba(0,0,0,0.4);
+  background: rgba(255,255,255,0.1);
   border-radius: 50%;
 `;
 

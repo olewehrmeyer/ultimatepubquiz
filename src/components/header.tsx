@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { brandColor, brandColorText } from "../colors";
 import { shuffle } from "../helpers";
 
 

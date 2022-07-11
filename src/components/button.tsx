@@ -22,12 +22,13 @@ export const PrimaryButton = styled(Button)`
 `;
 
 export const RoundButton = styled.button`
-  background-color: white;
+  background-color: #333;
+  color: #fff;
   border: none;
   text-align: center;
-  padding: 5px;
+  padding: 2px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
   display: inline-block;
   transition: background-color linear 200ms;
   border-radius: 50%;
